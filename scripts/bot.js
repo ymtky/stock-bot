@@ -1,6 +1,10 @@
 const fetch = require('node-fetch');
 
 module.exports = ( robot => {
+  robot.respond(/add (.*)\s(.*)/, msg => {
+    // 登録処理を書く
+  })
+
   robot.respond(/(.*)\s(.*)/, msg => {
     Promise.all([fetchCurrentStockData(msg.match[2]), fetchDailyStockData(msg.match[2])]).then(values => {
       const current = values[0]
