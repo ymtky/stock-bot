@@ -1,0 +1,5 @@
+version: '3'
+services:
+  stock_bot:
+    restart: always
+    build: .
